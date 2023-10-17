@@ -157,7 +157,7 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   const generateExternalLink = (url, texte) => (
-    <button>
+    <button className="button">
       <a href={url} target="_blank" rel="noopener noreferrer">
         {texte}
       </a>
