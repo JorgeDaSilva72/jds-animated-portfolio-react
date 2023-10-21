@@ -3,6 +3,10 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+import { AiOutlineMail } from "react-icons/Ai";
+import { CiLocationOn } from "react-icons/Ci";
+import { AiOutlinePhone } from "react-icons/Ai";
+
 const variants = {
   initial: {
     y: 500,
@@ -59,16 +63,16 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>jorge.dasilva1@outlook.fr</span>
+          <AiOutlineMail />
+          <span> &nbsp;jorge.dasilva1@outlook.fr</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>Meudon-la-forêt , France</span>
+          <CiLocationOn />
+          <span>&nbsp;Meudon-la-forêt , France</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+00 33 6 62 30 09 32</span>
+          <AiOutlinePhone />
+          <span>&nbsp;+00 33 6 62 30 09 32</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">

@@ -7,10 +7,19 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  padding: 0 40px;
+
+  @include desktop {
+    padding: 30px;
+  }
+
+  @include tablet {
+    padding: 20px;
+  }
 
   @include mobile {
+    padding-top: 50px;
     width: 100%;
-    padding: 10px;
     flex-direction: column;
   }
 
@@ -33,7 +42,7 @@
     }
 
     @include mobile {
-      gap: 10px;
+      gap: 20px;
       text-align: center;
       align-items: center;
       margin-top: 60px;
@@ -87,6 +96,11 @@
       position: absolute;
       margin: auto;
       z-index: -1;
+
+      @include mobile {
+        transform: none !important;
+        display: none;
+      }
     }
 
     form {
