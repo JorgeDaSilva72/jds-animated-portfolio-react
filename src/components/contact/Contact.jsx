@@ -7,6 +7,8 @@ import { AiOutlineMail } from "react-icons/Ai";
 import { CiLocationOn } from "react-icons/Ci";
 import { AiOutlinePhone } from "react-icons/Ai";
 
+import toast from "react-hot-toast";
+
 const variants = {
   initial: {
     y: 500,
@@ -44,10 +46,13 @@ const Contact = () => {
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
           setSuccess(true);
+          toast.success("Email sent successfully!");
         },
         function (error) {
           console.log("FAILED...", error);
           setError(true);
+          toast.error("Something went wrong");
+          return;
         }
       );
   };
@@ -116,8 +121,8 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {/* {error && toast("Something went wrong")} */}
+          {/* {success && toast("Your mail was succesfully sent")} */}
         </motion.form>
       </div>
     </motion.div>
