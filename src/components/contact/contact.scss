@@ -10,16 +10,19 @@
   padding: 0 40px;
 
   @include desktop {
+    gap: 30px;
     padding: 30px;
   }
 
   @include tablet {
+    gap: 20px;
     padding: 20px;
   }
 
   @include mobile {
-    padding-top: 50px;
     width: 100%;
+    gap: 10px;
+
     flex-direction: column;
   }
 

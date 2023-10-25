@@ -10,7 +10,7 @@
     max-width: 1366px;
     height: 100%;
     margin: auto;
-    padding: 0 20px; /*padding: 0 20px; Ajout d 'un padding de 10px a droite et à gauche */
+    padding: 0 20px; /*padding: 0 20px; Ajout d 'un padding de 20px a droite et à gauche */
 
     @include desktop {
       padding: 0 20px;
@@ -35,7 +35,7 @@
       @include mobile {
         height: 50%;
         width: 100%;
-        gap: 10px;
+        gap: 20px;
         align-items: center;
         text-align: center;
       }
@@ -61,7 +61,7 @@
           font-size: 54px;
         }
         @include mobile {
-          font-size: 20px;
+          font-size: 25px;
         }
       }
 
